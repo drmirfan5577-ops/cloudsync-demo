@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CloudSync Demo</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 20%,#312e81,#0f172a 60%);color:#e2e8f0;padding:24px}
+    .card{max-width:560px;width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:34px;backdrop-filter:blur(12px)}
+    h1{margin:0 0 10px;font-size:28px;letter-spacing:-.02em}p{margin:0 0 18px;color:#a5b4fc;line-height:1.55}
+    .row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+    .chip{font-size:12px;font-weight:600;padding:6px 11px;border-radius:999px;background:rgba(99,102,241,.22);color:#c7d2fe;border:1px solid rgba(129,140,248,.35)}
+    button{width:100%;padding:14px;border:0;border-radius:14px;background:linear-gradient(90deg,#6366f1,#a855f7);color:#fff;font-size:15px;font-weight:700;cursor:pointer}
+    #out{margin-top:14px;font-size:13px;color:#86efac;min-height:18px}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>CloudSync import test</h1>
+    <p>This page was generated from code inside the app, committed to GitHub and deployed to Netlify in one click.</p>
+    <div class="row"><span class="chip">GitHub commit</span><span class="chip">Netlify build</span><span class="chip">Live URL</span></div>
+    <button id="go">Run live check</button>
+    <div id="out"></div>
+  </main>
+  <script>
+    document.getElementById('go').addEventListener('click', function () {
+      document.getElementById('out').textContent = 'Live at ' + location.hostname + ' · ' + new Date().toLocaleString();
+    });
+  </script>
+</body>
+</html>
